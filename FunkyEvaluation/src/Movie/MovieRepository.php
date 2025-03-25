@@ -33,5 +33,4 @@ class MovieRepository extends BaseRepository
         $stmt->execute(); // L'exécution de la requête
         return $stmt->fetchAll(\PDO::FETCH_ASSOC); // La récupération des résultats sous forme de tableau de films
     }
-
 }

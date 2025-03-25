@@ -1,0 +1,20 @@
+# Задаем индексный файл по умолчанию
+DirectoryIndex index.php
+
+# Перезаписываем URL для дружественных URL (если нужно)
+RewriteEngine On
+RewriteRule ^oldpage\.html$ newpage.php [L]
+
+# Ограничиваем доступ к некоторым файлам
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+Require all granted
+</FilesMatch>
+
+# Установка кастомных страниц ошибок
+ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /errors/500.html
+
+# Включение сжатия файлов для повышения скорости загрузки
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>

@@ -1,0 +1,75 @@
+<nav class="nav">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="index.php">
+                    Home
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">Contact</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="?c=ContactController&m=renderContactForm">
+                            Contact Form
+                        </a>
+                    </li>
+
+                    <li class="submenu-item">
+                        <a href="?c=ContactListController&m=getAllContacts">
+                            Contact List
+                        </a>
+                    </li>
+
+                    <li class="submenu-item">
+                        <a href="?c=ContactListController&m=getContactStats">
+                            Statistics
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">RSS News</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="?c=RssController&m=getRss&t=cinema">
+                            Cinema
+                        </a>
+                    </li>
+
+                    <li class="submenu-item">
+                        <a href="?c=RssController&m=getRss&t=art">
+                            Art
+                        </a>
+                    </li>
+
+                    <li class="submenu-item">
+                        <a href="?c=RssController&m=getRss&t=science">
+                            Science
+                        </a>
+                    </li>
+
+                    <li class="submenu-item">
+                        <a href="?c=RssController&m=getRss&t=habr">
+                            Habr
+                        </a>
+                    </li>
+
+                    <li class="submenu-item">
+                        <a href="?c=RssController&m=getRss&t=nature">
+                            Nature
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a href="?c=UserController&m=getLoginForm">
+                    Sign Up
+                </a>
+            </li>
+
+        </ul>
+    </nav>

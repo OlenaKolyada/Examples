@@ -1,0 +1,125 @@
+%!Adobe-FontList 1.24
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Roboto-Bold
+FamilyName:Roboto
+StyleName:Bold
+FullName:Roboto Bold
+MenuName:Roboto
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:M:\Downloads\Arrow Functions Folder\Document fonts\Roboto-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:167336
+FileModTime:1663824430
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Roboto
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Roboto-Regular
+FamilyName:Roboto
+StyleName:Regular
+FullName:Roboto
+MenuName:Roboto
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:M:\Downloads\Arrow Functions Folder\Document fonts\Roboto-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:168260
+FileModTime:1663824430
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Roboto
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SourceCodeVariable-Roman
+FamilyName:Source Code Variable
+StyleName:Roman
+FullName:Source Code Variable
+MenuName:Source Code Variable
+FamilyPrefix:SourceCodeRoman
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:M:\Downloads\Arrow Functions Folder\Document fonts\SourceCodeVariable-Roman.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:yes
+hasCOLR:no
+VariableFontType:CFF2VariableFont
+FileLength:198600
+FileModTime:1707170432
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:100
+NameArray:0,Mac,4,Source Code Variable
+NameArray:0,Win,1,Source Code Variable
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CourierNewPSMT
+FamilyName:Courier New
+StyleName:Regular
+FullName:Courier New
+MenuName:Courier New
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:M:\Downloads\Arrow Functions Folder\Document fonts\cour.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:806504
+FileModTime:1651900758
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Courier New
+NameArray:0,Win,1,Courier New
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CourierNewPS-BoldMT
+FamilyName:Courier New
+StyleName:Bold
+FullName:Courier New Bold
+MenuName:Courier New
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:M:\Downloads\Arrow Functions Folder\Document fonts\courbd.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:805244
+FileModTime:1651900758
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Courier New Bold
+NameArray:0,Win,1,Courier New
+%EndFont
+

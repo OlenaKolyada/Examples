@@ -1,0 +1,346 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#container aside:nth-child(1) {
+    background-color: #ffa801;
+    width: 100%;
+    padding: 1em;
+    order: 1;
+}
+
+#container aside:nth-child(3) {
+    background-color: cornflowerblue;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    order: 3;
+}
+
+main {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    order: 2;
+}
+
+main a {
+    text-decoration: none;
+    color: #ffa801;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em 0;
+}
+
+h1 {
+    font-family: "familjen-grotesk", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: "familjen-grotesk", sans-serif;
+    font-weight: 600;
+    color: cornflowerblue;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-family: "familjen-grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#logo {
+    width: 100px;
+    margin: 1em auto;
+    display: block;
+}
+
+.orange {
+    color: #ffa801;
+}
+
+.blue {
+    color: cornflowerblue;
+}
+
+#copywrite {
+    color: white;
+    font-size: xx-small;
+    margin-top: 2em;
+    text-align: center;
+}
+
+#about {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 100;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Специфичные стили для FunkyPaws */
+.featured-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+    width: 100%;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ffa801;
+    color: white;
+    border-radius: 4px;
+    margin-top: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e09200;
+    text-decoration: none;
+}
+
+/* Стиль для страницы кошек */
+.cats-row {
+    display: block;
+    width: 100%;
+}
+
+.cats-row .pet-card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2em;
+    display: block;
+}
+
+/* Стиль для страницы собак */
+.dogs-row {
+    display: block;
+    width: 100%;
+}
+
+.dogs-row .pet-card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2em;
+    display: block;
+}
+
+/* Общие стили для карточек питомцев */
+.pet-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.pet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.pet-card h3 {
+    margin: 1em 0 0.5em;
+}
+
+.pet-card p {
+    margin-bottom: 1em;
+}
+
+/* Pet profile page */
+.pet-profile {
+    display: block;
+    width: 100%;
+}
+
+.pet-image {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.pet-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pet-details {
+    width: 100%;
+}
+
+.pet-details ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5em;
+}
+
+.pet-details ul li {
+    margin-bottom: 0.8em;
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid #eee;
+}
+
+.pet-details ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+@media (min-width: 768px) {
+    #container {
+        flex-direction: row;
+    }
+
+    #container aside:nth-child(1) {
+        width: 20vw;
+        order: 1;
+    }
+
+    #container aside:nth-child(3) {
+        width: 10vw;
+        order: 3;
+    }
+
+    main {
+        width: 70vw;
+        order: 2;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    ul {
+        margin-top: 54vh;
+    }
+
+    #logo {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0 9vh 2vh 0;
+        width: 25vh;
+    }
+
+    #copywrite {
+        position: absolute;
+        bottom: 0;
+        margin: 3vh;
+    }
+
+    .featured-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .feature-box {
+        width: 45%;
+    }
+
+    .cats-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2%;
+    }
+
+    .cats-row .pet-card {
+        width: 30%;
+        max-width: 30%;
+        margin-bottom: 2em;
+    }
+
+
+    .dogs-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .dogs-row .pet-card {
+        width: 30%;
+        max-width: 30%;
+        margin-bottom: 2em;
+    }
+
+    .pet-profile {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .pet-image {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .pet-details {
+        flex: 1;
+    }
+}

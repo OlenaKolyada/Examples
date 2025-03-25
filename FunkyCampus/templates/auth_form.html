@@ -1,0 +1,104 @@
+<?php
+    if ($action === 'signup') {
+        $title = 'Create an Account';
+        $formAction = '?c=SignupController&m=signUp';
+        $buttonId = 'signup';
+        $buttonValue = 'signup';
+        $buttonText = 'Sign up';
+        $currentDate = date('Y-m-d');
+
+    } elseif ($action === 'login') {
+        $title = 'Login';
+        $formAction = '?c=LoginController&m=login';
+        $buttonId = 'login';
+        $buttonValue = 'login';
+        $buttonText = 'Login';
+        $currentDate = '';
+
+    } elseif ($action === 'restore') {
+        $title = 'Restore Password';
+        $formAction = '?c=RestoreController&m=requestPasswordUpdate';
+        $buttonId = 'restore';
+        $buttonValue = 'restore';
+        $buttonText = 'Restore';
+        $currentDate = '';
+
+      } elseif ($action === 'updatePassword') {
+        $title = 'Restore Password';
+        $formAction = '?c=RestoreController&m=updatePassword';
+        $buttonId = 'restore';
+        $buttonValue = 'restore';
+        $buttonText = 'Restore';
+        $currentDate = '';
+      }
+?>
+<h2><?= htmlspecialchars($title); ?></h2>
+<div class="auth-form">
+
+    <!--Title-->
+    <h5 class="orange"><?= htmlspecialchars($message); ?></h5>
+
+    <form action="<?= htmlspecialchars($formAction); ?>" method="post">
+
+        <!--Email-->
+        <label for="email">Email:</label><br>
+        <input class="auth-field" type="email" id="email" name="email" maxlength="255" required><br><br>
+
+        <!--Password-->
+        <?php if ($action === 'signup' || $action === 'login' || $action === 'updatePassword'): ?>
+        <label for="password">Password:</label><br>
+        <span class="password-field">
+            <input class="auth-field password" type="password" id="password" name="password" maxlength="255" required><br><br>
+            <span class="toggle-password">
+            <i class="fas fa-eye"></i>
+            </span>
+        </span>
+        <?php endif; ?>
+
+        <!--Password Text-->
+        <div class="auth-text">
+            <?php if ($action === 'login'): ?>
+            <p><a href="?c=AuthController&m=getAuthForm&action=restore" id="forgot-password-link">Forgot password?</a>
+                <input type="checkbox" name="remember" id="remember-me"> Remember me</p>
+            <?php elseif($action === 'signup'): ?>
+            <p id="password-pattern-message">Password must be at least 8 characters long<br>
+                and include both letters and numbers</p>
+            <?php endif; ?>
+        </div>
+
+        <!--Confirm Password-->
+        <?php if ($action === 'signup' || $action === 'updatePassword'): ?>
+        <label for="confirm_password">Confirm password:</label><br>
+        <span class="password-field">
+            <input class="auth-field password" type="password" id="confirm_password" name="password" maxlength="255" required><br><br>
+            <span class="toggle-password">
+            <i class="fas fa-eye"></i>
+            </span>
+        </span>
+        <?php endif; ?>
+
+        <!--Confirm Password Text-->
+        <div class="auth-text">
+            <?php if($action === 'signup' || $action === 'updatePassword'): ?>
+            <p id="password-mismatch-message">Passwords don't match</p>
+            <?php endif; ?>
+        </div>
+
+        <!--Hidden Fields (Registration Date and Status)-->
+        <?php if ($action === 'signup'): ?>
+        <input type="hidden" id="registration_date" name="registration_date" value="<?= htmlspecialchars($currentDate); ?>">
+        <input type="hidden" id="status" name="status" value="unverified">
+        <?php endif; ?>
+
+        <div class="auth-buttons-main">
+            <button type="submit" id="btn-<?= htmlspecialchars($buttonId); ?>" name="action"
+                    value="<?= htmlspecialchars($buttonValue); ?>" class="btn-funky btn-blue" disabled>
+                <?= htmlspecialchars($buttonText); ?>
+            </button>
+
+            <input type="reset" id="btn-reset" class="btn-funky btn-light" value="Reset" disabled>
+        </div>
+
+
+    </form>
+</div>

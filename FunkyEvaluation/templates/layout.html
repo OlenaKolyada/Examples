@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $title ?? 'Funky Evaluation'; ?></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link  rel="stylesheet" href="../public/css/styles.css">
+    <script defer src="../public/js/script.js"></script>
+
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<header class="bg-cornflower text-white text-center py-3">
+    <?php include dirname(__DIR__) . '/templates/header.html'; ?>
+</header>
+
+<main class="container my-4 flex-grow-1">
+    <div class="row">
+        <section class="col-md-12">
+            <?php include $content; ?>
+        </section>
+    </div>
+</main>
+
+<footer class="bg-orange text-center py-3 mt-auto">
+    <?php include dirname(__DIR__) . '/templates/footer.html'; ?>
+</footer>
+
+</body>
+</html>

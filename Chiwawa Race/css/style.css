@@ -1,0 +1,133 @@
+#race__track {
+    display: block;
+    position: relative;
+    background-image: url('../img/bg.png');
+    width: 1500px;
+    height: 370px;
+    border-radius: 5px;
+}
+
+#user__message {
+    display: block;
+    position: relative;
+    width: 500px;
+    height: 173px;
+    margin: 10px auto;
+    padding: 20px 10px;
+    background-color:#fcce8d;
+    border-radius: 5px;
+    font-family: "moonblossom", sans-serif;
+    color: #141313;
+    font-size:x-large;
+    text-align: center;
+    line-height: 1.3;
+    
+}
+
+#buttons {
+    display: block;
+    position: relative;
+    width: 203px;
+    margin: 10px auto;
+}
+
+.red {
+    color: #d23b47;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.blue {
+    color:cornflowerblue;
+    font-weight: bold;
+}
+
+.guess {
+    font-weight: bold;
+}
+
+.first__place {
+    font-weight: bold;
+}
+
+#race__track img:nth-of-type(1) {
+    position: absolute;
+    top : 65px;
+    left : 10px;
+}
+#race__track img:nth-of-type(2) {
+    position: absolute;
+    top : 145px;
+    left : 10px;
+}
+#race__track img:nth-of-type(3) {
+    position: absolute;
+    top : 225px;
+    left : 10px;
+}
+#race__track img:nth-of-type(4) {
+    position: absolute;
+    top : 305px;
+    left : 10px;
+}
+
+#user__message img {
+    margin: 30px 15px 20px 0;
+}
+
+#user__message img:hover {
+    cursor: pointer;
+    filter: saturate(300%);
+}
+
+#user__message > img:only-of-type {
+    display: block;
+    margin: 20px auto;
+
+}
+
+#user__message > img:only-of-type:hover {
+    cursor: initial;
+    filter: initial;
+    filter: initial;
+}
+
+#download {
+    margin-left:  5px;
+    float: left;
+    font-family: "moonblossom", sans-serif;
+}
+
+a:nth-of-type(1) {
+    color:cornflowerblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:nth-of-type(2) {
+    color:lightcoral;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:nth-of-type(1):hover {
+    color:rgb(152, 183, 241);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:nth-of-type(2):hover {
+    color:rgb(237, 195, 195);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#copyright {
+    float: right;
+    text-align: right;
+    margin-right:  5px;
+    font-size: meduim;
+    font-family: "moonblossom", sans-serif;
+}

@@ -1,0 +1,31 @@
+<h1><?php echo htmlspecialchars($pageTitle); ?></h1>
+<div class="rss">
+    <ul class="rss-ul">
+        <?php foreach ($rssArray as $item): ?>
+            <li class="rss-item">
+                <div class="rss-content">
+
+                    <h2><?= $item['title']; ?></h2>
+
+                    <?php if ($item['image'] !== ''): ?>
+                    <img src="<?= $item['image']; ?>" 
+                         alt="<?= $item['title']; ?>" 
+                         title="<?= $item['title']; ?>"
+                         class="rss-img">
+                    <?php endif; ?>
+
+                    <div class="rss-description">
+                        <?= $item['description']; ?>
+                    </div>
+                    <div class="rss-link">
+                        <a href="<?= $item['link']; ?>">read more</a>
+                    </div>
+                    
+                </div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <div class="rss-credits">
+        <a href="<?= 'https://' . $item['domain']; ?>"><?= $item['channelTitle'] ?></a>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+{
+    "name": "funkycorgi/evaluation-movies",
+    "description": "Evaluation MVC",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Olena Kolyada",
+            "email": "olena@funkycorgi.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+      "ext-pdo": "*"
+    }
+}

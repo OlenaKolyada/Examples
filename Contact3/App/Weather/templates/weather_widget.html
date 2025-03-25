@@ -1,0 +1,40 @@
+<div class="weather-widget">
+    <?php if(isset($_SESSION['last_city'])): ?>
+    <?php $lastCity = $_SESSION['last_city']; ?>
+    <?php $lastData = $_SESSION['weather_data']; ?>
+    <?php endif; ?>
+
+    <div>
+        <span class="city-name">
+            <?= $data['city_info']['name'] ?? $lastCity ?? '' ?>
+        </span><br>
+
+        <span class="date">
+            <?= $data['fcst_day_0']['date'] ?? $lastData['fcst_day_0']['date'] ?? ''; ?>
+        </span>
+    </div>
+    <div>
+        <span class="weather-icon">
+            <?php if (!empty($data['current_condition']['icon']) || !empty($lastData['current_condition']['icon'])): ?>
+                <img src="<?= $data['current_condition']['icon'] ?? $lastData['current_condition']['icon']; ?>" alt="Icon">
+            <?php endif; ?>
+        </span>
+    </div>
+
+    <div>
+        <span class="temperature">
+            <?= ($data['current_condition']['tmp'] ?? $lastData['current_condition']['tmp'] ?? '') !== '' ? ($data['current_condition']['tmp'] ?? $lastData['current_condition']['tmp']) . ' °C' : ''; ?>
+        </span><br>
+
+        <span class="weather-condition">
+            <?= $data['current_condition']['condition'] ?? $lastData['current_condition']['condition'] ?? ''; ?>
+        </span>
+    </div>
+
+    <form action="?c=WeatherController&m=getWeather" method="post" class="search-form">
+        <input type="search" placeholder="Enter city" name="city" aria-label="Search" class="search-input">
+        <button type="submit" class="search-button">
+            Weather
+        </button>
+    </form>
+</div>

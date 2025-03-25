@@ -1,0 +1,53 @@
+<?php if (!isset($contactData['id'])): ?>
+    <h1>Contact Form</h1><br>
+<?php else: ?>
+    <h1>Edit Contact</h1><br>
+<?php endif; ?>
+
+<div class="form">
+
+    <form action="?c=ContactController&m=submitContactForm" id="contact_form" method="post">
+
+        <input type="hidden" name="id" value="<?= htmlspecialchars($contactData['id'] ?? '') ?>">
+
+        <input type="radio" id="mr" name="civility" value="Mr." 
+        <?= (isset($contactData['civility']) && $contactData['civility'] === 'Mr.') ? 'checked' : '' ?>>
+        <label for="mr">Mr.</label>
+
+        <input type="radio" id="ms" name="civility" value="Ms." 
+        <?= (isset($contactData['civility']) && $contactData['civility'] === 'Ms.') ? 'checked' : '' ?>>
+        <label for="ms">Ms.</label>
+
+        <input type="radio" id="mx" name="civility" value="Mx." 
+        <?= (isset($contactData['civility']) && $contactData['civility'] === 'Mx.') ? 'checked' : '' ?>>
+        <label for="mx">Mx.</label><br><br>
+
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" name="firstName" maxlength="255" 
+        value="<?= htmlspecialchars($contactData['firstName'] ?? '') ?>" autofocus><br><br>
+
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" name="lastName" maxlength="255"
+        value="<?= htmlspecialchars($contactData['lastName'] ?? '') ?>"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone" maxlength="20"
+        value="<?= htmlspecialchars($contactData['phone'] ?? '') ?>"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" maxlength="255"
+        value="<?= htmlspecialchars($contactData['email'] ?? '') ?>"><br><br>
+
+        <?php if (!isset($contactData['id']) || empty($contactData['id'])): ?>
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject" maxlength="255"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" maxlength="1000" cols="40"></textarea><br><br>
+        <?php endif; ?>
+
+        <input type="submit" value="Send">
+        <input type="reset" value="Cancel">
+    </form>
+
+</div>

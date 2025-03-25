@@ -1,0 +1,110 @@
+body {
+	font-size:16px;
+}
+#div__header {
+	margin-left: 15px;
+}
+.alert {
+	color: red;
+}
+
+#div__weather, #div__graphic {
+	width: 50%;
+	box-sizing: border-box;
+	float: left; 
+}
+
+#div__weather h1, #div__weather h2 {
+	margin-left: 10px;
+}
+
+.weather {
+	width: 90%;
+	height: 400px;
+	border-spacing:0px;
+	margin-left: 10px;
+}
+
+.weather thead tr:first-child {
+	font-size: 1em;
+	text-align: left;
+	background-color:#99FF99 !important;
+}
+
+.weather tr:nth-child(even) {
+	background-color:#99FF99;
+}
+
+.weather tr:nth-child(odd) {
+	background-color:#99FFFF;
+}
+
+.weather th,
+.weather td {
+    vertical-align: middle;
+	padding: 15px;
+}
+
+.weather th img,
+.weather td img {
+    vertical-align: middle;
+	margin-left: 10px;
+}
+
+.graphic {
+	width: 96%;
+	height: 400px;
+	border-spacing:0px;
+	border-collapse: collapse;
+}
+
+.graphic tr:nth-child(1) td {
+	border-top: 0;
+	position: relative;
+}
+
+.graphic tr:last-child {
+	height: 30px;
+}
+
+.graphic td:nth-child(1) {
+	vertical-align: bottom;
+}
+
+.graphic td {
+	border-top: 1px solid rgb(237, 236, 236);
+	position: relative;
+	width: 16%;
+}
+
+.rectangle__min {
+    width: 30px;
+	background-color: cornflowerblue;
+    position: absolute;
+	bottom: 0;
+	border-radius: 4px 4px 0 0;
+}
+.rectangle__max {
+    width: 30px;
+	background-color: gold;
+	position: absolute;
+	bottom: 0;
+	left: 30px;
+	border-radius: 4px 4px 0 0;
+}
+
+.text__small {
+	color: black;
+	z-index: 1;
+	position: absolute;
+	font-size: x-small;
+	font-weight: bolder;
+	text-align: center;
+	left: 50%;
+	bottom: 100%;
+	transform: translate(-50%, -50%);
+}
+
+.text__small::after {
+	content: '℃';
+}

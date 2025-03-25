@@ -1,0 +1,23 @@
+<h1>Create an account</h1>
+<div class="form">
+
+    <form action="?c=UserController&m=submitLoginForm" id="user_form" method="post">
+
+        <input type="hidden" name="id" value="<?= htmlspecialchars($formData['id'] ?? '') ?>">
+
+        <label for="login">Login:</label><br>
+        <input type="text" id="login" name="login" maxlength="255" autofocus><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" maxlength="255"><br><br>
+
+        <input type="radio" id="user" name="role" value="user" checked>
+        <label for="user">User</label>
+
+        <input type="radio" id="admin" name="role" value="admin">
+        <label for="admin">Admin</label><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+    </form>
+</div>

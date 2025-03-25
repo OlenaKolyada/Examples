@@ -1,0 +1,30 @@
+<div>
+    <h1>Weather in <?= $city; ?></h1>
+    <?= date('d.m.Y'); ?><br><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Icon</th>
+                    <th>Condition</th>
+                    <th>T min</th>
+                    <th>T max</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php for ($i = 0; $i < 5; $i++): ?>
+                    <?php $dayKey = 'fcst_day_' . $i;
+                    if (isset($data[$dayKey])): ?>
+                        <tr>
+                            <td><?= $data[$dayKey]['day_long']; ?></td>
+                            <td><img src="<?= $data[$dayKey]['icon']; ?>" alt="Icon"></td>
+                            <td><?= $data[$dayKey]['condition']; ?></td>
+                            <td><?= $data[$dayKey]['tmin']; ?> °C</td>
+                            <td><?= $data[$dayKey]['tmax']; ?> °C</td>
+                        </tr>
+                    <?php endif; ?>
+                <?php endfor; ?>
+            </tbody>
+        </table>
+</div>

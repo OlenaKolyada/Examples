@@ -1,0 +1,104 @@
+.bg-cornflower {
+    background-color: cornflowerblue;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.logo {
+    height: 5rem;
+}
+
+.orange {
+    color: orange;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search_item {
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    padding: 0.375rem 0.75rem;
+    border: none;
+    color: #333;
+}
+
+.search_item:focus, .search_item:active {
+    border: none;
+}
+
+.btn-funky {
+    display: inline-block;
+    width: 100%;
+    height: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.25rem;
+    padding: 0.375rem 1.6rem;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.btn-funky:hover, .btn-funky:focus, .btn-funky:active, .btn-funky.focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn-funky:disabled {
+    cursor: default;
+}
+
+.btn-dark {
+    background-color: #0056b3;
+    color: #fff;
+    border: 0.1rem solid #0056b3;
+}
+
+.btn-dark:hover {
+    background-color: #bde0f8;
+    color: #0056b3;
+    border-color: #bde0f8;
+}
+
+.btn-dark:focus, .btn-dark:active {
+    background-color: #bde0f8 !important;
+    color: #0056b3 !important;
+    border-color: #bde0f8 !important;
+}
+
+.movie_item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 4rem;
+    margin-bottom: 1rem;
+    background-color: #bde0f8;
+    border-radius: 0.25rem;
+}
+
+.movie_item > div {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+}
+
+.movie_title {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.movie_description {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding: 0 3rem;
+}
+
+#counter {
+    margin-bottom: 1rem;
+}
